@@ -5,7 +5,7 @@ LABEL maintainer "m.v.d.schee@ewake.nl"
 CMD ["/sbin/my_init"]
 
 # New user is added without login and root access to only have access to the application.
-RUN groupadd -r container && useradd -r -g container container
+RUN groupadd -r container && useradd -r -g container -d /var/www container
 
 # Install core packages
 RUN apt-get update -q
