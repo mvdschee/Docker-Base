@@ -10,5 +10,5 @@ RUN groupadd -r container && useradd -r -g container -d /var/www container
 # Install core packages
 RUN apt-get update -q
 RUN apt-get upgrade -y -q
-RUN apt-get install -y zip unzip git-core
+RUN apt-get install -y zip unzip git-core nano
 RUN apt-get clean -q && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
